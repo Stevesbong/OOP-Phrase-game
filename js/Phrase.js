@@ -2,4 +2,20 @@
  * Project 4 - OOP Game App
  * Phrase.js */
 
- const prases = [];
+class Phrase {
+    constructor(phrase) {
+        this.phrase = phrase;
+    }
+
+    addPhraseToDisplay(){
+
+    }
+
+    checkLetter() {
+
+    }
+
+    showMatchedLetter() {
+
+    }
+}
