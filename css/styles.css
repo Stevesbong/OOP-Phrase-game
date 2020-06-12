@@ -60,6 +60,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  color: var(--color-keys-light);
+  background-color: var(--color-keys);
+}
+
 #btn__reset {
 	width: 200px;
 	margin: 0 auto;
@@ -88,7 +93,27 @@ button {
 .header {
   color: #3a3f58;
 }
+@keyframes rightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-55px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  90% {
+    transform: translateX(-55px);
+  }
+  to {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(.21,.61,.35,1);
+  }
 
+}
 
 /* Phrase */
 
@@ -120,6 +145,8 @@ button {
   border-radius: 5px;
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
+  transition: 1s;
+  transform: rotateY(360deg);
 }
 
 
@@ -177,6 +204,10 @@ button {
 
 .title {
   color: #FFF;
+  transition: .5s .2s;
+}
+.title:hover {
+  transform: scale(1.2);
 }
 
 .start {
@@ -201,4 +232,29 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+.lostHeart {
+  animation: shake .8s;
+}
+@keyframes shake {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
 }

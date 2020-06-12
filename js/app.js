@@ -1,12 +1,32 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js */
-
-const phrase = new Phrase('Life is like a box of chocolates');
 const game = new Game();
 
 
+/**
+ * When clicked the start game button, startGame method in Game class will called
+ */
+document.getElementById('btn__reset').addEventListener('click', () => {
 
-game.phrases.forEach( (phrase, index) => {
-    console.log(`Phrase ${index} - phrases: ${phrase.phrase}`);
+    game.startGame();
+
+})
+
+/**
+ * When clicked keyboard letter, handleInteraction method in Game class will called
+ */
+document.getElementById('qwerty').addEventListener('click', e => {
+
+    if(e.target.tagName === 'BUTTON') {
+
+        game.handleInteraction(e.target.textContent);
+
+    }
+})
+
+/**
+ * Listening for keyboard key press and call handleInteraction method
+ */
+document.addEventListener('keyup', e => {
+
+    game.handleInteraction(e.key);
+
 })
