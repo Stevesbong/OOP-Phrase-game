@@ -21,3 +21,7 @@ Created a OOP Game show page with HTML and CSS, and JavaScript OOP.
 2. Button color and background change when hover over it.
 3. Header 'Phrase Hunder' animation.
 4. Added 360deg translate when letter revealed.
+
+#### Trying to add some more style in it
+1. Domino colors on phrase when game stared.
+2. Transitions on hover.
