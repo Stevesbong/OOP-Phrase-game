@@ -95,7 +95,7 @@ class Game {
 
     /**
      * Handles onscreen keyboard button clicks
-     * @param {HTMLButtonElementTextContent} letter - The clicked letter element
+     * @param {Button Element TextContent} letter - The clicked letter element
      */
     handleInteraction(letter) {
         document.querySelectorAll('.key').forEach( key => {
