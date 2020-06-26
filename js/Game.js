@@ -98,19 +98,19 @@ class Game {
      * @param {Button Element TextContent} letter - The clicked letter element
      */
     handleInteraction(letter) {
-        document.querySelectorAll('.key').forEach( key => {
+        document.querySelectorAll('.key').forEach( keyButton => {
 
-            if(key.textContent === letter) {
+            if(keyButton.textContent === letter) {
 
                 if( this.activePhrase.checkLetter(letter) ) {
-                    key.className = 'chosen';
+                    keyButton.className = 'chosen';
                     this.activePhrase.showMatchedLetter(letter);
                     if(this.checkForWin()) {
                         this.gameOver(true);
                     }
                 } else {
-                    key.className = 'wrong';
-                    key.disabled = true;
+                    keyButton.className = 'wrong';
+                    keyButton.disabled = true;
                     this.removeLife();
                 }
             }
@@ -134,9 +134,9 @@ class Game {
             button.classList.remove('chosen', 'wrong');
             button.classList.add('key');
         });
-        hearts.forEach(e=> {
-            e.firstElementChild.src = "images/liveHeart.png";
-            e.firstElementChild.classList.remove('lostHeart');
+        hearts.forEach( img => {
+            img.firstElementChild.src = "images/liveHeart.png";
+            img.firstElementChild.classList.remove('lostHeart');
         })
     }
 }
